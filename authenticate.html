@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.80.0">
+  <title>Ink Piece · Read Comics Online</title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">-->
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="dist/css/index.css" rel="stylesheet">
+  <link href="dist/css/main.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow">
+    <div class="container-fluid">
+      <img class="navbar-brand me-3" width="40" height="48" href="#" src="assets/logo.png">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navbarsExampleDefault">
+
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Read Comics Online</a>
+          </li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search by Name">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <div class="py-5 px-3">
+
+
+
+      <nav>
+        <div class="nav nav-tabs mb-2" id="nav-tab" role="tablist">
+          <a class="nav-link active" id="nav-signin-tab" data-bs-toggle="tab" href="#nav-signin" role="tab"
+            aria-controls="nav-signin" aria-selected="true">Sign in</a>
+
+          <a class="nav-link" id="nav-signup-tab" data-bs-toggle="tab" href="#nav-signup" role="tab"
+            aria-controls="nav-signup" aria-selected="false">Sign up</a>
+        </div>
+      </nav>
+
+
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade active show" id="nav-signin" role="tabpanel" aria-labelledby="nav-signin-tab">
+          <form method="post" class="form-signin" action="incl/signin.incl.php">
+
+            <div class="form-floating mb-3 mt-3">
+              <input type="email" class="form-control" id="floatingSignUpInput" placeholder="name@example.com" required
+                autofocus>
+              <label for="floatingSignUpInput">Email address</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingSignInPassword" placeholder="Password" required>
+              <label for="floatingSignInPassword">Password</label>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-secondary" type="submit">Sign In</button>
+          </form>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="nav-signup" role="tabpanel" aria-labelledby="nav-signup-tab">
+          <form class="row g-0 form mt-3" method="post" action="incl/signup.incl.php">
+
+            <div class="col-md-4 form-floating mb-3 gr-1">
+              <input type="text" class="form-control" id="floatingNameInput" placeholder="Name" required autofocus>
+
+              <label for="floatingNameInput">Name</label>
+            </div>
+
+            <div class="col-md-8 form-floating mb-3 ">
+              <input type="text" class="form-control" id="floatingSurnameInput" placeholder="Surname" required>
+              <label for="floatingSurnameInput">Surname</label>
+            </div>
+
+            <div class="col-md-12  form-floating mb-3">
+              <input type="email" class="form-control" id="floatingEmailInput" placeholder="name@example.com" aria-describedby="emailHelp" required>
+              <label for="floatingEmailInput">Email address</label>
+
+            <div id="emailHelp" class="form-text"><small>Will never share your email with anyone else.</small></div>
+            </div>
+
+            <div class="col-md-6 form-floating mb-3">
+              <input type="password" class="form-control" id="floatingSignUpPassword" placeholder="Password" required>
+              <label for="floatingSignUpPassword">Password</label>
+              <div id="emailHelp" class="form-text"><small>You are the only one who knows your password, Keep it safe & make sure to remember it.</small></div>
+            </div>
+            <div class="col-md-6 form-floating mb-3">
+              <input type="password" class="form-control" id="floatingSignUpPasswordRepeat"
+                placeholder="Password Repeat" required>
+              <label for="floatingSignUpPasswordRepeat">Password repeat</label>
+            </div>
+
+            <div class="col-md-12 form-check mb-3">
+              <input class="form-check-input is-valid" type="checkbox" value="" id="checkAgreement" required>
+              <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#modalCenteredScrollable"
+                for="checkAgreement">
+                <span class="agreement" title='Click to view and agree to terms and conditions'> Agree to terms and
+                  conditions</span>
+              </label>
+
+              <div class="valid-feedback">
+                You must agree before sign up.
+              </div>
+            </div>
+
+
+            <div class="modal fade" id="modalCenteredScrollable" tabindex="-1"
+              aria-labelledby="modalCenteredScrollableTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalCenteredScrollableTitle">Agree to terms and conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>The information used to sign up in this <em>form</em> is valid and we as InkPiece believe is of
+                      the ownership of all books to be published on this website.</p>
+                    <p>All abuse of copy rights is directed to We do not own any publishing rights for any of the book
+                      published in this website.</p>
+                    <p>What follows is just some placeholder text for this modal dialog. Sipping on Rosé, Silver Lake
+                      sun, coming up all lazy. It’s in the palm of your hand now baby. So we hit the boulevard. So make
+                      a wish, I'll make it like your birthday everyday. Do you ever feel already buried deep six feet
+                      under? It's time to bring out the big balloons. You could've been the greatest. Passport stamps,
+                      she's cosmopolitan. Your kiss is cosmic, every move is magic.</p>
+                    <p>We're living the life. We're doing it right. Open up your heart. I was tryna hit it and quit it.
+                      Her love is like a drug. Always leaves a trail of stardust. The girl's a freak, she drive a jeep
+                      in Laguna Beach. Fine, fresh, fierce, we got it on lock. All my girls vintage Chanel baby.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Understood</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 mb3">
+              <button class="w-100 btn btn-lg btn-secondary" type="submit">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <p class="mt-2 text-center text-muted small fixed">&copy; InkPiece 2022 – 2022</p>
+    </div>
+
+  </main><!-- /.container -->
+  <script src="dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
